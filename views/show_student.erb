@@ -1,0 +1,17 @@
+<%=erb :'partials/_header' %>
+<h1><%= @student["name"] %> </h1>
+
+<h3>Info:</h3>
+
+<h4>Age: <%=@student["age"] %> </h4>
+<h4>Spirit Animal: <%=@student["spirit_animal"] %> </h4>
+
+<a href="/squads/<%=@squad["id"]%>/students/<%=@student["id"]%>/edit"> Edit the Info!</a>
+
+  <form action="/squads/<%= @squad["id"]%>/students/<%= @student["id"]%>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete!">
+  </form>
+
+<%=erb :'partials/_footer' %>
+

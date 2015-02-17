@@ -1,0 +1,19 @@
+<%=erb :'partials/_header' %>
+<h1>Add a new Student to: </h1>
+
+<h3> <%=@squad["name"]%> SQUAD with an ID: <%= @squad["id"] %></h3>
+  <form action="/squads/:squad_id/students" method="post">
+   <p>
+    <label for="name">Name:</label>
+     <input type="text" name="student_name" id="" autofocus></p>
+     <p><label for="mascot">Age:</label><input type="text" name="age" id="">
+     </p>
+<p><label for="spirit_animal">Spirit Animal:</label><input type="text" name="spirit_animal" id="">
+     </p>
+     <p><label for="spirit_animal">Squad ID:</label><input type="text" name="squadid" id="">
+     </p>
+     <input type="submit" value="Add Student to Squad">
+
+  </form>
+
+<%=erb :'partials/_footer' %>

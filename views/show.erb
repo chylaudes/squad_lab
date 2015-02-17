@@ -1,0 +1,25 @@
+<%=erb :'partials/_header' %>
+<h1><%= @squad["name"]%> </h1>
+<h3>Mascot: <%= @squad["mascot"] %></h3>
+
+<table class="table table-striped">
+<thead>
+  <td>ID</td>
+  <td>Student's Name</td>
+  <td>More Info</td>
+</thead>
+<% @students.each do |student| %>
+<tr>
+
+    <td><%= student["id"]%> </td>
+    <td> <%= student["name"]%> </td>
+    <td><a href="/squads/<%=@squad["id"]%>/students/<%=student["id"]%>"> Show more info!</a></td>
+  </tr>
+     <% end %>
+
+</table>
+<p><a href="/squads/<%=@squad["id"]%>/students/new"> Create a New Student</a></p>
+
+
+
+<%=erb :'partials/_footer' %>

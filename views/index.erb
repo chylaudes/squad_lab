@@ -1,0 +1,33 @@
+<%=erb :'partials/_header' %>
+
+<h1>Squads Unite!</h1>
+
+
+
+<table class="table table-striped">
+<thead>
+  <td>ID</td>
+  <td>Squad's Name</td>
+  <td>Show Info</td>
+  <td>Edit Info</td>
+</thead>
+<% @squads.each do |squad| %>
+<tr>
+
+    <td><%= squad["id"]%> </td>
+    <td> <%= squad["name"]%> </td>
+    <td><a href="/squads/<%= squad["id"]%>"> Students!</a></td>
+    <td><a href="/squads/<%= squad["id"]%>/edit"> Edit the Name/ Mascot!</a></td>
+  </tr>
+     <% end %>
+
+</table>
+
+<p><a href="/squads/new"> Create a New Squad</a></p>
+
+
+<p><a href="/squads/students"> List of Students!</a></p>
+
+
+
+<%=erb :'partials/_footer' %>

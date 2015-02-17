@@ -1,0 +1,23 @@
+<%=erb :'partials/_header' %>
+
+<h1>List of Students</h1>
+
+
+
+<table class="table table-striped">
+<thead>
+  <td>ID</td>
+  <td>Student Name</td>
+
+</thead>
+<% @students.each do |student| %>
+<tr>
+
+    <td><%= student["id"]%> </td>
+    <td> <%= student["name"]%> </td>
+
+  </tr>
+     <% end %>
+</table>
+
+<%=erb :'partials/_footer' %>
