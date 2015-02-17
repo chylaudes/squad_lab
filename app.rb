@@ -104,10 +104,6 @@ erb :show_student
   end
 
 
-
-
-
-
 #SHOW
 #this route should take the user to a page that shows them a form to edit a student's information
 get '/squads/:squad_id/students/:student_id/edit' do
@@ -165,9 +161,6 @@ redirect "/squads/#{params[:squadid].to_i}"
 end
 
 
-
-
-
 #DELETE
 #this route should be used for deleting an existing squad
 delete '/squads/:squad_id' do
@@ -186,12 +179,3 @@ delete '/squads/:squad_id/students/:student_id' do
   @conn.exec("DELETE FROM students WHERE id= ($1)", [student_id])
 redirect "/squads"
 end
-
-
-
-
-
-
-
-
-
